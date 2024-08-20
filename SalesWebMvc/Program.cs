@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Pomelo.EntityFrameworkCore.MySql.Internal;
 using SalesWebMvc.Data;
+using SalesWebMvc.Services;
 using System.Configuration;
 
 
@@ -18,6 +19,7 @@ builder.Services.AddControllersWithViews();
 
 //Add the SeedingService as scoped
 builder.Services.AddScoped<SeedingService>();
+builder.Services.AddScoped<SellerService>();
 
 var app = builder.Build();
 
